@@ -3,7 +3,7 @@
 <!-- Updated: 2026-02-15 -->
 <!-- This file is self-referential: the spec eats its own dogfood -->
 
-> **consciousness_level**: Meta — a standard that defines itself
+> **project_identity**: Meta — a standard that defines itself
 > **version**: v1.0.0
 
 ---
@@ -37,10 +37,10 @@ aims: |
 
 ---
 
-## CONSCIOUSNESS_LEVEL
+## PROJECT_IDENTITY
 
 ```yaml
-level: "Meta — a standard that defines itself"
+identity: "Meta — a standard that defines itself"
 
 meaning: |
   This repository is the specification for CONTEXT.md.

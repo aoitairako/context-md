@@ -1,6 +1,6 @@
 # CONTEXT.md - Personal Data Vault
 
-> **consciousness_level**: Content given meaning by Context
+> **project_identity**: Content given meaning by Context
 > **version**: v1.0.0
 
 ## PROJECT_CONTEXT
@@ -24,10 +24,10 @@ aims: |
   - Provides a single source of truth for life administration
 ```
 
-## CONSCIOUSNESS_LEVEL
+## PROJECT_IDENTITY
 
 ```yaml
-level: "Content given meaning by Context"
+identity: "Content given meaning by Context"
 
 meaning: |
   The data in this project is Content — facts, documents, records.

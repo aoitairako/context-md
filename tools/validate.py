@@ -25,10 +25,10 @@ def validate(filepath):
         for name in [
             "Filename is CONTEXT.md",
             "Section: PROJECT_CONTEXT",
-            "Section: CONSCIOUSNESS_LEVEL",
+            "Section: PROJECT_IDENTITY",
             "Section: RELATIONSHIP",
             "YAML block: PROJECT_CONTEXT",
-            "YAML block: CONSCIOUSNESS_LEVEL",
+            "YAML block: PROJECT_IDENTITY",
             "YAML block: RELATIONSHIP",
             "Key: why (in PROJECT_CONTEXT)",
             "Key: ecosystem (in RELATIONSHIP)",
@@ -54,11 +54,11 @@ def validate(filepath):
 
     # 3-5. Required sections exist
     pc = find_section("PROJECT_CONTEXT")
-    cl = find_section("CONSCIOUSNESS_LEVEL")
+    cl = find_section("PROJECT_IDENTITY")
     rel = find_section("RELATIONSHIP")
 
     checks.append(("Section: PROJECT_CONTEXT", pc is not None))
-    checks.append(("Section: CONSCIOUSNESS_LEVEL", cl is not None))
+    checks.append(("Section: PROJECT_IDENTITY", cl is not None))
     checks.append(("Section: RELATIONSHIP", rel is not None))
 
     # 6-8. YAML blocks in each section
@@ -69,7 +69,7 @@ def validate(filepath):
     rel_yaml = yaml_block.search(rel) if rel else None
 
     checks.append(("YAML block: PROJECT_CONTEXT", pc_yaml is not None))
-    checks.append(("YAML block: CONSCIOUSNESS_LEVEL", cl_yaml is not None))
+    checks.append(("YAML block: PROJECT_IDENTITY", cl_yaml is not None))
     checks.append(("YAML block: RELATIONSHIP", rel_yaml is not None))
 
     # 9. why: key in PROJECT_CONTEXT

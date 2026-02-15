@@ -30,7 +30,7 @@ But no standard file answers the most fundamental question: **Why does this proj
 **CONTEXT.md** — a single markdown file at the root of any project that answers that question.
 
 - **Why** the project exists (philosophy, purpose)
-- **What level** of awareness it operates at
+- **What** the project's identity is
 - **How it relates** to the broader ecosystem
 
 ```
@@ -57,9 +57,9 @@ why: "Why this project exists"
 aims: "What it ultimately serves"
 ```
 
-## CONSCIOUSNESS_LEVEL
+## PROJECT_IDENTITY
 ```yaml
-level: "The level of awareness this project operates at"
+identity: "What this project is and how it sees itself"
 meaning: "What this means for design decisions"
 ```
 

@@ -13,10 +13,10 @@ aims: |
   To enable [desired outcome] for [target audience].
 ```
 
-## CONSCIOUSNESS_LEVEL
+## PROJECT_IDENTITY
 
 ```yaml
-level: "Practical utility"
+identity: "Practical utility"
 meaning: |
   This project operates at the level of practical problem-solving.
   Design decisions prioritize working solutions over theoretical elegance.

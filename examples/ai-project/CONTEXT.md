@@ -1,6 +1,6 @@
 # CONTEXT.md - AI Knowledge Engine
 
-> **consciousness_level**: Intelligence layer owned by the user
+> **project_identity**: Intelligence layer owned by the user
 > **version**: v1.0.0
 
 ## PROJECT_CONTEXT
@@ -22,10 +22,10 @@ aims: |
   - No single AI vendor lock-in exists
 ```
 
-## CONSCIOUSNESS_LEVEL
+## PROJECT_IDENTITY
 
 ```yaml
-level: "Self-sustaining intelligence"
+identity: "Self-sustaining intelligence"
 
 meaning: |
   This project operates at the level of self-sustaining architecture.

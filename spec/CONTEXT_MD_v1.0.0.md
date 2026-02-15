@@ -1,6 +1,6 @@
 # CONTEXT.md Specification v1.0.0
 
-**Status**: Draft
+**Status**: Stable
 **Date**: 2026-02-15
 **Author**: [aoitairako](https://github.com/aoitairako)
 **License**: CC0 1.0 (Public Domain)
@@ -59,11 +59,11 @@ aims: "What the project ultimately serves or enables"
 - SHOULD NOT include implementation details
 - SHOULD NOT include setup instructions
 
-### 4.2 CONSCIOUSNESS_LEVEL
+### 4.2 PROJECT_IDENTITY
 
-Answers: **"At what level does this project operate?"**
+Answers: **"What is this project, and how does it see itself?"**
 
-Think of it as maturity, scope, or ambition.
+Think of it as maturity, scope, or ambition — what defines this project's character.
 
 Examples:
 - "Production infrastructure" — reliability-first
@@ -71,13 +71,13 @@ Examples:
 - "Meta — a standard that defines itself" — self-referential
 
 ```yaml
-## CONSCIOUSNESS_LEVEL
-level: "A description of the project's level"
-meaning: "What this level means for the project's design and behavior"
+## PROJECT_IDENTITY
+identity: "A description of what this project is"
+meaning: "What this identity means for the project's design and behavior"
 ```
 
-- MUST describe the project's level or sophistication
-- MAY use numerical scales, qualitative descriptions, or domain-specific frameworks
+- MUST describe the project's identity or character
+- MAY use qualitative descriptions, maturity levels, or domain-specific frameworks
 - MAY use any framework that fits the project's domain
 
 ### 4.3 RELATIONSHIP
@@ -137,7 +137,7 @@ The file SHOULD begin with a metadata block:
 # CONTEXT.md - [Project Name]
 <!-- Optional: version, date, standard reference -->
 
-> **consciousness_level**: [level description]
+> **project_identity**: [identity description]
 > **version**: v[X.Y.Z]
 ```
 
@@ -165,7 +165,7 @@ No special tooling, SDK, or runtime is required.
 To adopt CONTEXT.md:
 
 1. Create a `CONTEXT.md` file at your project root
-2. Include the three required sections (PROJECT_CONTEXT, CONSCIOUSNESS_LEVEL, RELATIONSHIP)
+2. Include the three required sections (PROJECT_CONTEXT, PROJECT_IDENTITY, RELATIONSHIP)
 3. Optionally reference it from AGENTS.md: `context: CONTEXT.md`
 4. Optionally add the `context-md` topic to your GitHub repository
 
@@ -174,7 +174,7 @@ To adopt CONTEXT.md:
 The core distinction behind CONTEXT.md:
 
 - **Content**: What appears — code, data, features, files
-- **Context**: The field of meaning in which content exists — purpose, philosophy, awareness
+- **Context**: The field of meaning in which content exists — purpose, philosophy, identity
 
 Traditional project files describe Content (what the project does). CONTEXT.md describes Context (why the project exists and what meaning it creates).
 
