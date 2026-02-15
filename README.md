@@ -13,6 +13,8 @@ A new team member joins your project. They ask: "Why does this project exist?"
 
 You open the README. Setup instructions, API docs, usage examples — everything about *what* the project does. But nothing about *why*.
 
+You check the wiki. Last updated: 2019. The project started in 2021.
+
 Your project has files that describe **what** it does:
 
 - `README.md` — what the project is (for humans)
@@ -40,7 +42,7 @@ your-project/
 
 ## Quick Start
 
-Every new tool means config files, environment variables, dependencies...
+Every new tool means config files, environment variables, dependencies, a mass on your `node_modules` that rivals a small black hole, and a README you'll read later. *(You won't.)*
 
 CONTEXT.md needs two things: Markdown, and your intention. You already have both.
 
@@ -74,9 +76,10 @@ That's it. If your AI can read markdown — and it can — it now understands yo
 
 | | Content | Context |
 |--|---------|---------|
-| Definition | What appears (code, data, features) | The field of meaning (purpose, philosophy) |
+| Definition | What appears (code, data, features) | The meaning behind it (purpose, intention) |
 | Project files | README, AGENTS, source code | **CONTEXT.md** |
 | Question answered | "What does this do?" | "Why does this exist?" |
+| **Analogy** | **`git commit -m "fix"`** | **What actually broke and why** |
 
 Two developers can write the exact same function. One is building a toy. The other is building infrastructure that thousands depend on. The code is identical. The *context* is everything.
 
@@ -90,21 +93,18 @@ As a Content professional, AI is reshaping how we build software.
 
 But Context — the "why" — is something AI can't create.
 
-In *The Matrix*, Agent Smith demands: *"Why, Mr. Anderson? Why, why do you persist?"*
-Neo answers: *"Because I choose to."*
+In *The Little Prince*, the Fox says: *"What is essential is invisible to the eye."*
 
-A machine can ask "why" a thousand times. But *"because I choose to"* — that answer can only come from you. Intention can't be generated. It has to come from a human.
+AI handles everything visible — code, data, files, documentation. But the essential part — *why* this project exists — is invisible. It lives in the mind of the person who started it. AI can't generate it. Only you can write it down.
 
-CONTEXT.md is where that intention lives.
+CONTEXT.md is where that essential thing becomes words.
 
-*(Yes, this repo was built with AI assistance — check the commit history.
-AI helped express these ideas. The decision that this standard should exist?
-That came from a human. That's exactly the point.)*
+*(Yes, this repo was built with AI assistance. An AI helped write a standard about the one thing AI can't write. That's exactly the point.)*
 
 ### Beyond the Repository Boundary
 
-"I'm an engineer" tells you what someone does.
-"I became an engineer because I want to build apps that kids can use safely" tells you why.
+"I'm an engineer who improves ad click-through rates by 0.3%" tells you what someone does.
+"I became an engineer because I want to build apps that make kids say 'again! again!'" tells you why.
 
 Same person. Completely different impression.
 
@@ -112,7 +112,7 @@ Most project files describe what's *inside* the repository. CONTEXT.md describes
 
 ## Specification
 
-See [spec/CONTEXT_MD_v1.0.0.md](spec/CONTEXT_MD_v1.0.0.md) for the formal specification. It's short.
+See [spec/CONTEXT_MD_v1.0.0.md](spec/CONTEXT_MD_v1.0.0.md) for the formal specification. It's shorter than most cookie consent popups, and considerably more useful.
 
 ## Examples
 
@@ -134,7 +134,7 @@ README.md (Doc)      — Human-readable documentation
 Tool config (How)    — CLAUDE.md, .cursorrules, etc.
 ```
 
-CONTEXT.md sits at the top. Not because it's bossy — because "why" is the question that gives meaning to everything below it.
+CONTEXT.md sits at the top. Not because it's bossy — because "why" is the question that gives meaning to everything below it. Without it, you're just typing.
 
 ## Design Principles
 
@@ -194,6 +194,8 @@ Contributions welcome. Open an issue, send a PR, or just put a CONTEXT.md in you
 
 If you adopt it, consider adding the topic `context-md` to your GitHub repository.
 
+If you don't adopt it, no hard feelings. Existential questions take time.
+
 ## License
 
 [CC0 1.0 (Public Domain)](LICENSE) — No rights reserved. No attribution required. Use it however you want.
@@ -201,7 +203,7 @@ If you adopt it, consider adding the topic `context-md` to your GitHub repositor
 ---
 
 Every other file in your project, AI can help you write.
-This one? Only you.
+This one? I can't.
 
 *One small file for a project. One giant leap for documentation.*
 
