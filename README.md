@@ -1,3 +1,5 @@
+<!-- If you're reading the raw markdown instead of the rendered page, you're exactly the kind of person who'd write a CONTEXT.md. -->
+
 # CONTEXT.md
 
 **The one file only you can write.**
@@ -33,11 +35,11 @@ But no standard file answers the most fundamental question: **Why does this proj
 
 ```
 your-project/
-├── CONTEXT.md     ← Why (philosophy, purpose, meaning)
+├── CONTEXT.md     ← Why (you are here)
 ├── AGENTS.md      ← What (AI agent instructions)
-├── README.md      ← Doc (human documentation)
+├── README.md      ← Doc (often skipped)
 ├── CLAUDE.md, etc. ← How (tool-specific settings)
-└── src/
+└── src/            ← (finally, some actual code)
 ```
 
 ## Quick Start
@@ -156,10 +158,10 @@ Nobody writes a shopping list in their diary. Wrong place.
 
 Same idea: if a sentence answers "what" or "how" instead of "why," it belongs in a different file.
 
-- Setup instructions → README.md
-- AI agent instructions → AGENTS.md
-- Tool-specific configuration → CLAUDE.md, etc.
-- API documentation, code examples, command lists
+- ❌ "To install, run `npm install`" — That's a README.
+- ❌ "Use Python 3.12 or higher" — README again.
+- ❌ "AI should respond in JSON format" — That's an AGENTS.md.
+- ✅ "We built this because..." — Now you're writing Context.
 
 ## Prior Art
 
@@ -188,6 +190,17 @@ python3 tools/validate.py CONTEXT.md
 
 No dependencies. No configuration. Just the standard.
 
+## FAQ
+
+**Q: Can AI write my CONTEXT.md for me?**
+A: Sure. But then ask yourself: why did you just delegate your "why" to an AI?
+
+**Q: What if I don't know my project's "why"?**
+A: Then you have a bigger problem than documentation.
+
+**Q: Is this just a README with extra steps?**
+A: Is a love letter just a letter with extra feelings?
+
 ## Contributing
 
 Contributions welcome. Open an issue, send a PR, or just put a CONTEXT.md in your own project. That's contributing too.
@@ -204,6 +217,9 @@ If you don't adopt it, no hard feelings. Existential questions take time.
 
 Every other file in your project, AI can help you write.
 This one? I can't.
+
+Actually, let me try: *"This project exists to deliver value through innovative solutions."*
+Perfect, right? ...Right?
 
 *One small file for a project. One giant leap for documentation.*
 
