@@ -44,7 +44,7 @@ Every new tool means config files, environment variables, dependencies...
 
 CONTEXT.md needs two things: Markdown, and your intention. You already have both.
 
-```markdown
+````markdown
 # CONTEXT.md - My Project
 
 ## PROJECT_CONTEXT
@@ -64,7 +64,7 @@ meaning: "What this means for design decisions"
 ecosystem: "How this project relates to others"
 dependencies: "What it builds upon"
 ```
-```
+````
 
 That's it. If your AI can read markdown — and it can — it now understands your project's purpose.
 
