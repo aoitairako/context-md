@@ -97,6 +97,10 @@ A machine can ask "why" a thousand times. But *"because I choose to"* — that a
 
 CONTEXT.md is where that intention lives.
 
+*(Yes, this repo was built with AI assistance — check the commit history.
+AI helped express these ideas. The decision that this standard should exist?
+That came from a human. That's exactly the point.)*
+
 ### Beyond the Repository Boundary
 
 "I'm an engineer" tells you what someone does.
@@ -156,6 +160,33 @@ Same idea: if a sentence answers "what" or "how" instead of "why," it belongs in
 - AI agent instructions → AGENTS.md
 - Tool-specific configuration → CLAUDE.md, etc.
 - API documentation, code examples, command lists
+
+## Prior Art
+
+| Project | Approach | Focus |
+|---------|----------|-------|
+| [llm-context-md](https://github.com/the-michael-toy/llm-context-md) | Hierarchical CONTEXT.md files throughout directories | Technical context (What): architecture, conventions |
+| [codebase-context-spec](https://github.com/Agentic-Insights/codebase-context-spec) | `.context/` directory with structured docs (archived) | Architecture documentation (What): design decisions |
+
+These projects focus on **What** — technical context about code.
+This project focuses on **Why** — purpose and meaning that no technical context provides.
+They solve different problems. A project can use both.
+
+## Tooling
+
+### Validate
+
+```bash
+python3 tools/validate.py CONTEXT.md
+```
+
+### GitHub Action
+
+```yaml
+- uses: aoitairako/context-md@v1
+```
+
+No dependencies. No configuration. Just the standard.
 
 ## Contributing
 

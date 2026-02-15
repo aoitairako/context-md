@@ -1,0 +1,15 @@
+name: 'Validate CONTEXT.md'
+description: 'Validate against CONTEXT.md Standard v1.0.0'
+branding:
+  icon: 'file-text'
+  color: 'blue'
+inputs:
+  path:
+    description: 'Path to CONTEXT.md'
+    default: 'CONTEXT.md'
+runs:
+  using: 'composite'
+  steps:
+    - name: Validate
+      shell: bash
+      run: python3 ${{ github.action_path }}/tools/validate.py ${{ inputs.path }}

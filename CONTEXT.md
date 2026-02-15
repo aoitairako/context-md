@@ -13,7 +13,7 @@
 ```yaml
 why: |
   Software projects have files that describe WHAT they do (README.md),
-  WHAT AI should do (AGENTS.md), and HOW tools should behave (CLAUDE.md).
+  WHAT AI should do (AGENTS.md), and HOW tools should behave (CLAUDE.md, .cursorrules, etc.).
 
   But no file answers the most fundamental question:
   WHY does this project exist?
@@ -32,7 +32,7 @@ aims: |
   1. Any project can adopt (zero cost, place a file)
   2. Any AI can read (markdown, AI-agnostic)
   3. Transcends the repository boundary (gives AI a broader perspective)
-  4. Complements existing standards (AGENTS.md, README.md, CLAUDE.md)
+  4. Complements existing standards (AGENTS.md, README.md, CLAUDE.md, .cursorrules, etc.)
 ```
 
 ---
@@ -58,10 +58,10 @@ meaning: |
 ecosystem:
   agents_md: "AGENTS.md (OpenAI/AAIF) — What AI should do"
   readme_md: "README.md — What the project is (for humans)"
-  claude_md: "CLAUDE.md (Anthropic) — How Claude should behave"
+  tool_config: "CLAUDE.md, .cursorrules, etc. — How specific tools should behave"
   context_md: "CONTEXT.md — WHY the project exists (this standard)"
 
-hierarchy: "CONTEXT.md (Why) > AGENTS.md (What) > README.md (Doc) > CLAUDE.md (How)"
+hierarchy: "CONTEXT.md (Why) > AGENTS.md (What) > README.md (Doc) > Tool config (How)"
 
 complementary: |
   CONTEXT.md does not replace any existing standard.

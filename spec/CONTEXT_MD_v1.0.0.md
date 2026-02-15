@@ -15,7 +15,7 @@ CONTEXT.md is a markdown file placed at the root of a project that defines **why
 CONTEXT.md (Why)  — Philosophy, purpose, field of meaning
 AGENTS.md  (What) — AI agent instructions (OpenAI/AAIF standard)
 README.md  (Doc)  — Human-readable documentation
-CLAUDE.md  (How)  — Claude Code specific settings (Anthropic)
+Tool config (How) — CLAUDE.md, .cursorrules, etc.
 ```
 
 ## 2. File Location
@@ -27,7 +27,7 @@ project-root/
 ├── CONTEXT.md     ← REQUIRED: at project root
 ├── AGENTS.md      ← optional
 ├── README.md      ← conventional
-├── CLAUDE.md      ← optional
+├── CLAUDE.md, etc. ← optional (tool-specific)
 └── ...
 ```
 
@@ -61,15 +61,22 @@ aims: "What the project ultimately serves or enables"
 
 ### 4.2 CONSCIOUSNESS_LEVEL
 
-Answers: **"At what level of awareness does this project operate?"**
+Answers: **"At what level does this project operate?"**
+
+Think of it as maturity, scope, or ambition.
+
+Examples:
+- "Production infrastructure" — reliability-first
+- "Experimental prototype" — move fast, expect breaking changes
+- "Meta — a standard that defines itself" — self-referential
 
 ```yaml
 ## CONSCIOUSNESS_LEVEL
-level: "A description of the project's awareness level"
+level: "A description of the project's level"
 meaning: "What this level means for the project's design and behavior"
 ```
 
-- MUST describe the project's level of awareness or sophistication
+- MUST describe the project's level or sophistication
 - MAY use numerical scales, qualitative descriptions, or domain-specific frameworks
 - MAY use any framework that fits the project's domain
 
@@ -149,7 +156,7 @@ CONTEXT.md is designed to work with:
 - Any AI tool that reads markdown (Claude, GPT, Gemini, Cursor, Continue, etc.)
 - Any CI/CD system that can parse files
 - Any documentation system that processes markdown
-- Existing file standards (AGENTS.md, README.md, CLAUDE.md)
+- Existing file standards (AGENTS.md, README.md, CLAUDE.md, .cursorrules, etc.)
 
 No special tooling, SDK, or runtime is required.
 
