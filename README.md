@@ -99,7 +99,15 @@ In *The Little Prince*, the Fox says: *"What is essential is invisible to the ey
 
 AI handles everything visible — code, data, files, documentation. But the essential part — *why* this project exists — is invisible. It lives in the mind of the person who started it. AI can't generate it. Only you can write it down.
 
-CONTEXT.md is where that essential thing becomes words.
+"But wait — AI *can* generate a CONTEXT.md. I just tried it."
+
+Sure it can. AI could write Ruby's CONTEXT.md: *"A dynamic, open-source programming language focused on simplicity and productivity."* Technically accurate. But Matz didn't create Ruby for "simplicity and productivity." He created it because he wanted programmers to be happy. That's not a feature request — it's a wish. AI can describe the language. Only Matz could describe the feeling behind it.
+
+The same goes for your project. AI can infer what it does from your code, your commits, your README. But the spark that made you start — that's not in the data.
+
+In a world where AI can generate any codebase, the projects that stand out won't be the ones with the best code. They'll be the ones with the clearest purpose. People don't contribute to repositories. They contribute to something they believe in.
+
+CONTEXT.md is where that "something" becomes words.
 
 *(Yes, this repo was built with AI assistance. An AI helped write a standard about the one thing AI can't write. That's exactly the point.)*
 
@@ -112,6 +120,41 @@ Same person. Completely different impression.
 
 Most project files describe what's *inside* the repository. CONTEXT.md describes where the project sits in the *larger world*. An AI with a CONTEXT.md doesn't just know what to do — it knows *why it matters*.
 
+### The Bridge Pattern
+
+Why not just put your philosophy in AGENTS.md?
+
+Because instruction files speak in rules: *do this, don't do that, use this format.* They're precise, actionable, and machine-readable. That's their job.
+
+Philosophy doesn't work that way. "We believe the user owns their data" isn't a rule — it's a compass bearing. Put it next to `"respond in JSON format"` and the AI treats them as equals. One is a hard constraint. The other is soft guidance. The AI can't tell the difference, and you've just added noise to your rulebook — or worse, created a conflict.
+
+CONTEXT.md solves this by separation:
+
+```
+CONTEXT.md (Philosophy)  → soft guidance, direction, no concrete answers
+AGENTS.md  (Rules)       → hard constraints, specific actions
+```
+
+Both loaded by the AI. Different purposes. No conflict.
+
+When the AI reads your rules *and* your philosophy, something interesting happens. It encounters an edge case your rules don't cover — and instead of stopping or guessing, it has a compass. It might even spot something *you* missed: a request that technically follows your rules but quietly violates your principles. A blind spot you didn't know you had.
+
+That's the bridge: CONTEXT.md gives the AI a perspective your instruction files can't express. Not answers — *direction*.
+
+You can strengthen the connection with `why:` annotations in your instruction files:
+
+```yaml
+# In your AGENTS.md or CLAUDE.md
+rules:
+  - rule: "Never store user data in external services"
+    why: "See CONTEXT.md → PROJECT_CONTEXT: user owns their data"
+
+  - rule: "All APIs must support offline mode"
+    why: "See CONTEXT.md → DESIGN_PRINCIPLES: persistence over convenience"
+```
+
+These pointers connect specific rules to specific philosophies. The AI doesn't just follow the rule — it understands the reasoning, and can apply that reasoning to situations you didn't anticipate.
+
 ## Specification
 
 See [spec/CONTEXT_MD_v1.0.0.md](spec/CONTEXT_MD_v1.0.0.md) for the formal specification. It's shorter than most cookie consent popups, and considerably more useful.
@@ -123,6 +166,7 @@ See [spec/CONTEXT_MD_v1.0.0.md](spec/CONTEXT_MD_v1.0.0.md) for the formal specif
 | [minimal](examples/minimal/) | The bare minimum. Three sections. Copy and go. |
 | [ai-project](examples/ai-project/) | AI/ML project with a tool ecosystem |
 | [personal-data](examples/personal-data/) | Privacy-focused data management |
+| [hybrid](examples/hybrid/) | The bridge pattern: AGENTS.md rules with `why:` pointers to CONTEXT.md |
 
 ## File Hierarchy
 
@@ -169,10 +213,14 @@ Same idea: if a sentence answers "what" or "how" instead of "why," it belongs in
 |---------|----------|-------|
 | [llm-context-md](https://github.com/the-michael-toy/llm-context-md) | Hierarchical CONTEXT.md files throughout directories | Technical context (What): architecture, conventions |
 | [codebase-context-spec](https://github.com/Agentic-Insights/codebase-context-spec) | `.context/` directory with structured docs (archived) | Architecture documentation (What): design decisions |
+| [ADR](https://adr.github.io/) (Architecture Decision Records) | Individual records per technical decision | Decision rationale (What was decided and why) |
 
-These projects focus on **What** — technical context about code.
+These projects focus on **What** — technical context about code and decisions.
 This project focuses on **Why** — purpose and meaning that no technical context provides.
-They solve different problems. A project can use both.
+
+ADR and CONTEXT.md are particularly complementary. ADR looks backward: "We chose PostgreSQL because..." — reasoning from a decision already made. CONTEXT.md looks forward: "This project exists because..." — purpose that precedes any decision. A healthy project can check its ADRs against its CONTEXT.md: if the decisions no longer align with the purpose, something drifted.
+
+They solve different problems. A project can use all of them.
 
 ## Tooling
 

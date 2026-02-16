@@ -129,6 +129,8 @@ CONTEXT.md MUST NOT contain:
 - The file SHOULD be readable by any AI tool that processes markdown
 - No tool-specific syntax or extensions are required
 
+> **Note**: CONTEXT.md is RECOMMENDED to be loaded directly by AI tools alongside instruction files. Its philosophical content provides directional guidance that complements the concrete rules in AGENTS.md and CLAUDE.md without conflicting with them — precisely because it lives in a separate file with a distinct purpose. Mixing philosophy into instruction files risks creating noise or conflicts where AI cannot distinguish hard constraints from soft guidance. Instruction files MAY additionally include `why:` annotations that reference specific CONTEXT.md sections, reinforcing the connection between rules and their philosophical basis. See Section 11 for the annotation pattern.
+
 ## 8. Header Format
 
 The file SHOULD begin with a metadata block:
@@ -167,7 +169,13 @@ To adopt CONTEXT.md:
 1. Create a `CONTEXT.md` file at your project root
 2. Include the three required sections (PROJECT_CONTEXT, PROJECT_IDENTITY, RELATIONSHIP)
 3. Optionally reference it from AGENTS.md: `context: CONTEXT.md`
-4. Optionally add the `context-md` topic to your GitHub repository
+4. Optionally annotate rules in instruction files with `why:` pointers to CONTEXT.md:
+   ```yaml
+   rules:
+     - rule: "All data stays on user's infrastructure"
+       why: "See CONTEXT.md → PROJECT_CONTEXT"
+   ```
+5. Optionally add the `context-md` topic to your GitHub repository
 
 ## 12. Content vs Context
 
