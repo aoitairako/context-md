@@ -167,6 +167,7 @@ See [spec/CONTEXT_MD_v1.0.0.md](spec/CONTEXT_MD_v1.0.0.md) for the formal specif
 | [ai-project](examples/ai-project/) | AI/ML project with a tool ecosystem |
 | [personal-data](examples/personal-data/) | Privacy-focused data management |
 | [hybrid](examples/hybrid/) | The bridge pattern: AGENTS.md rules with `why:` pointers to CONTEXT.md |
+| [inverse-context](examples/inverse-context/) | Inverse context logic: CONTEXT.md explores beyond AGENTS.md scope using consciousness levels |
 
 ## File Hierarchy
 
