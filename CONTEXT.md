@@ -72,5 +72,19 @@ complementary: |
 
 ---
 
-*CONTEXT.md Standard v1.0.0*
+## FOUNDATION
+
+```yaml
+foundation:
+  project: "The Context Foundation"
+  path: "~/context/"
+  domain: "thecontextfoundation.org"
+  relationship: "The file convention born from The Context Foundation's philosophy"
+  future_home: "github.com/the-context-foundation/context-md"
+```
+
+---
+
+*CONTEXT.md Standard v1.0.1*
+*The Context Foundation: ~/context/CONTEXT.md v5.0.0*
 *Self-referential: this file IS the standard it defines*
